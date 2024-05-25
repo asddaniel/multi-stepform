@@ -1,5 +1,6 @@
 {
   "name": "multi-stepform",
+  "homepage":"https://asddaniel.github.io/multi-stepform/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,12 +8,15 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@nextui-org/react": "^2.3.6",
     "framer-motion": "^11.2.6",
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
+    "react-deploy": "^0.0.15",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1"
   },
