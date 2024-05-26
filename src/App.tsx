@@ -1,6 +1,11 @@
 import { Card, Checkbox, Switch } from "@nextui-org/react";
 import { useState } from "react";
 import Step from "./components/Step";
+import bgsidebar from "./assets/images/bg-sidebar-desktop.svg";
+import iconAdvanced from "./assets/images/icon-advanced.svg";
+import iconArcade from "./assets/images/icon-arcade.svg";
+import iconPro from "./assets/images/icon-pro.svg";
+import icoThankYou from "./assets/images/icon-thank-you.svg";
 
 function App() {
  const [activeStep, setActiveStep] = useState(1)
@@ -98,8 +103,9 @@ function App() {
                   </div>
                   <div className="relative z-10 lg:translate-y-56 translate-x-64 lg:translate-x-0">
                   <Step onEvent={()=>setActiveStep(4)} title="SUMARY" numeros={4}  active={activeStep==4} />
+
                   </div>
-                  <img src="https://github.com/asddaniel/multi-stepform/blob/main/assets/images/bg-sidebar-desktop.svg" className=" lg:w-full w-[120vw] lg:h-full h-40 lg:scale-100 object-bottom   rotate-180 lg:rotate-0 rounded  object-cover  " alt=""  />
+                  <img src={bgsidebar} className=" lg:w-full w-[120vw] lg:h-full h-40 lg:scale-100 object-bottom   rotate-180 lg:rotate-0 rounded  object-cover  " alt=""  />
                   
                   </div>
               </div>
@@ -109,7 +115,7 @@ function App() {
               </div>
               <div className="p-3   pt-8 lg:px-16 rounded-lg col-span-2 relative overflow-x-hidden flex-col flex gap-2 items-start">
                  {activeStep==1 && <div className="flex flex-col gap-2 items-start lg:p-0 p-4 rounded-lg  lg:shadow-none shadow bg-white lg:bg-transparent">
-                    <div className="font-bold lg:text-3xl text-2xl w-full text-blue-950">Personnal info</div>
+                    <div className="font-bold lg:text-3xl text-2xl w-full text-blue-950">Personnal information</div>
                     <div className="text-gray-400 lg:text-xl text-sm font-semibold lg:font-normal">Please provide your name, email address and phone number</div>
                     <div className="flex justify-between w-full">
                     <label htmlFor="" className="text-blue-950 lg:text-xl text-sm pt-4 font-semi-bold">Name</label>
@@ -140,7 +146,7 @@ function App() {
                     <div className="lg:pt-8 pt-2 lg:grid grid-cols-3  gap-2 ">
                         <div onClick={()=>setdataform({...dataform, step2:{...dataform.step2, selectedPlan:"arcade"}})} className={"p-3 lg:w-32 w-full lg:my-0 my-2 lg:block flex items-center gap-3 lg:h-44 rounded-lg border focus:border-blue-900 cursor-pointer "+(dataform.step2.selectedPlan=="arcade"?"border-blue-900":"")}>
                           <div className="overflow-hidden">
-                            <img src="https://github.com/asddaniel/multi-stepform/blob/main/assets/images/icon-arcade.svg" alt="icon arcade" />
+                            <img src={iconArcade} alt="icon arcade" />
                           </div>
                           <div className="lg:pt-8  lg:block flex flex-col items-start justify-center">
                             <div className="font-semibold text-lg text-blue-950">Arcade</div>
@@ -153,7 +159,7 @@ function App() {
                         </div>
                         <div  onClick={()=>setdataform({...dataform, step2:{...dataform.step2, selectedPlan:"advanced"}})} className={"p-3 lg:w-32 w-full lg:my-0 my-2 lg:block flex items-center gap-3 lg:h-44 rounded-lg border focus:border-blue-900 cursor-pointer "+(dataform.step2.selectedPlan=="advanced"?"border-blue-900":"")}>
                           <div className="overflow-hidden">
-                            <img src="https://github.com/asddaniel/multi-stepform/blob/main/assets/images/icon-advanced.svg" alt="icon advanced" />
+                            <img src={iconAdvanced} alt="icon advanced" />
                           </div>
                           <div className="lg:pt-8  lg:block flex flex-col items-start justify-center">
                             <div className="font-semibold text-lg text-blue-950">Advanced</div>
@@ -166,7 +172,7 @@ function App() {
                         </div>
                         <div  onClick={()=>setdataform({...dataform, step2:{...dataform.step2, selectedPlan:"pro"}})} className={"p-3 lg:w-32 w-full lg:my-0 my-2 lg:block flex items-center gap-3 lg:h-44 rounded-lg border focus:border-blue-900 cursor-pointer "+(dataform.step2.selectedPlan=="pro"?"border-blue-900":"")}>
                           <div className="overflow-hidden">
-                            <img src="https://github.com/asddaniel/multi-stepform/blob/main/assets/images/icon-pro.svg" alt="icon pro" />
+                            <img src={iconPro} alt="icon pro" />
                           </div>
                           <div className="lg:pt-8  lg:block flex flex-col items-start justify-center">
                             <div className="font-semibold text-lg text-blue-950">Pro</div>
@@ -261,7 +267,7 @@ function App() {
                       {activeStep == 5 && <div className="h-full p-3 w-full  flex justify-center items-center rounded-lg  lg:shadow-none shadow bg-white lg:bg-transparent">
                         <div className="p-2">
                           <div className="py-6 px-8 flex justify-center items-center">
-                          <img src="https://github.com/asddaniel/multi-stepform/blob/main/assets/images/icon-thank-you.svg" alt="" />
+                          <img src={icoThankYou} alt="" />
                           </div>
                           <div className="text-3xl font-bold text-blue-950 text-center py-4">Thank you!</div>
                           <div className="text-gray-400 text-sm font-semibold text-center">Thanks for confirming your subscription! We hope you have fun using our platform.
